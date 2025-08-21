@@ -1,15 +1,14 @@
-name: Deploy Terraform state bucket
+name: Deploy Terraform state bucket to Dev
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - dev
+    
     
 jobs:
   deploy:
     name: 'Deploy Terraform state bucket'
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/dev' # Only run on 'dev' branch
 
     defaults:
       run:
