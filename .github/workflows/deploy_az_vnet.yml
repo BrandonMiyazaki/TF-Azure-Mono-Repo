@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./AzureResources/VirtualNetwork
+        working-directory: ./AzureResources/VirtualNetworks
     steps:
       - name: Checkout
         uses: actions/checkout@v2
