@@ -12,19 +12,19 @@ module "virtual_network" {
 		{
 			name           = "ServerSubnet"
 			address_prefix = "10.25.2.0/24"
-		}
+		},
         {
 			name           = "StorageAccountSubnet"
 			address_prefix = "10.25.3.0/24"
-		}
+		},
         {
 			name           = "AzSQLSubnet"
 			address_prefix = "10.25.4.0/24"
-		}
+		},
         {
 			name           = "SQLMiSubnet"
 			address_prefix = "10.25.5.0/24"
-		}
+		},
 	]
 	location            = "westus2"
 	tags = {
