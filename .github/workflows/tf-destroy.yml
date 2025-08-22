@@ -38,6 +38,14 @@ jobs:
             STORAGE_ACCOUNT: ${{ secrets.STORAGE_ACCOUNT }}
             CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
         run: terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT" -backend-config="container_name=$CONTAINER_NAME" -backend-config="resource_group_name=$RESOURCE_GROUP"
+      
+      - name: Terraform validate
+        id: validate
+        run: terraform validate -no-color
+
+      - name: Terraform plan
+        id: plan
+        run: terraform plan -no-color
 
       - name: Terraform destroy
         id: destroy
